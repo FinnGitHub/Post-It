@@ -14,6 +14,6 @@ namespace PostIt.Data
         {
         }
 
-        public DbSet<Post> Events { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }
