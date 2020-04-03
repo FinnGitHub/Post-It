@@ -11,6 +11,8 @@ namespace PostIt.Models
         [Key]
         public int EventID { get; set; }
 
+        public int AccountID { get; set; }
+
         public string PostName { get; set; }
 
         public string Description { get; set; }

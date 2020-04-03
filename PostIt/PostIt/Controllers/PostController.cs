@@ -10,7 +10,7 @@ namespace PostIt.Controllers
 {
     public class PostController : Controller
     {
-        private PostContext db;
+        private  PostContext db;
 
         public IActionResult Index()
         {
@@ -23,7 +23,7 @@ namespace PostIt.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreatePost(Post post)
+        public ActionResult CreatePost(Post post)
         {
             if (ModelState.IsValid)
             {
