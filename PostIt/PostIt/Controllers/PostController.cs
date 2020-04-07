@@ -17,24 +17,29 @@ namespace PostIt.Controllers
             return View();
         }
 
-        public IActionResult CreatePost()
+        public IActionResult Posts()
+        {
+            return View();
+        }
+
+        public IActionResult PostCreate()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult CreatePost(Post post)
+        public IActionResult PostCreate(Post post)
         {
             if (ModelState.IsValid)
             {
                 db.Posts.Add(post);
                 db.SaveChanges();
 
-                return View("CreateSuccess");
+                return View("PostCreateSuccess");
             }
             else
             {
-                return View("CreateFailed");
+                return View("PostCreateFailed");
             }
         }
 

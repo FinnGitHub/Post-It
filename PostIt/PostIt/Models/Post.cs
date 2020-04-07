@@ -9,7 +9,7 @@ namespace PostIt.Models
     public class Post
     {
         [Key]
-        public int EventID { get; set; }
+        public int PostID { get; set; }
 
         public int AccountID { get; set; }
 
